@@ -3,7 +3,7 @@ import { useCart } from '../Context/CartContext';
 import { Container, Row, Col, Card, Button, Modal, Form } from 'react-bootstrap';
 
 function CartPage() {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart, clearCart } = useCart();
   const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
@@ -12,6 +12,7 @@ function CartPage() {
   function checkout() {
     const catnames = cart.map(cat => cat.name).join(', ');
     setShowModal(false);
+    clearCart();
     alert(`Checkout done! Thank you! :3\nYour order: ${catnames}.\nYour information:\nName: ${name}\nEmail: ${mail}\nAddress: ${address}`);
   }
 
@@ -53,6 +54,7 @@ function CartPage() {
         {cart.length > 0 && (
           <div className="text-center mt-4">
             <Button
+              size="lg"
               style={{backgroundColor: 'rgb(240, 166, 166)', border: 'none', color: 'black', borderRadius: '25px'}}
               onClick={() => setShowModal(true)}
             >
