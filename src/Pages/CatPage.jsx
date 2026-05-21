@@ -78,7 +78,7 @@ function CatPage() {
           ))}
         </Row>
 
-        <Pagination className="justify-content-center mt-4">
+        <Pagination className="justify-content-center mt-4" >
           <Pagination.Prev onClick={() => setCurrentPage(p => p - 1)} disabled={currentPage === 1} />
           <Pagination.Item active>{currentPage}/{totalPages}</Pagination.Item>
           <Pagination.Next onClick={() => setCurrentPage(p => p + 1)} disabled={currentPage === totalPages} />

@@ -96,3 +96,37 @@ body {
     overflow: hidden;
     clip: rect(0,0,0,0);
 }
+
+.pagination .page-link {
+  color: black;
+  background-color: rgb(240, 166, 166);
+  border-color: rgb(240, 166, 166);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: rgb(240, 166, 166);
+  border-color: rgb(240, 166, 166);
+  color: black;
+}
+
+.pagination .page-link:hover {
+  background-color: pink;
+  border-color: pink;
+  color: black;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: lightgray;
+  border-color: lightgray;
+  color: gray;
+}
+
+.nav-link svg {
+  position: relative;
+  top: -2px;
+}
+
+.btn:hover {
+  background-color: pink !important;
+  border-color: pink !important;
+}
